@@ -9,7 +9,7 @@ Small Jekyll site for `rishi.my`, edited either through Pages CMS or directly as
 - `_matter/*.md` renders at `/matter/:name/`
 - uploaded media lives in `media/`
 
-Each entry supports `title`, `date`, optional `summary`, optional `link`, optional media fields, and Markdown body content.
+Each thought/life entry supports `title`, `date`, and Markdown body content. Matter entries also support a project link.
 
 ## Editing
 

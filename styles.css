@@ -241,18 +241,8 @@ time {
 }
 
 .project-link {
-  margin-top: 8px;
-}
-
-.media-frame {
-  margin: 0 0 28px;
-  padding: 8px;
-}
-
-.media-frame figcaption {
-  margin-top: 8px;
+  margin: 8px 0 0;
   color: var(--muted);
-  font-size: 12px;
 }
 
 .body {
@@ -285,6 +275,12 @@ time {
   margin-left: 0;
   padding-left: 18px;
   color: var(--muted);
+}
+
+.body img {
+  margin: 1.4em 0;
+  padding: 6px;
+  border: 1px solid var(--line);
 }
 
 .empty {

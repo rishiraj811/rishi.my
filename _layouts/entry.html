@@ -11,13 +11,12 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
   </header>
 
-  {% include media.html item=page %}
+  {% if page.collection == 'matter' and page.link %}
+    {% assign project_url = page.link | remove: 'https://' | remove: 'http://' %}
+    <p class="project-link"><span>link</span> <a href="{{ page.link }}">{{ project_url }}</a></p>
+  {% endif %}
 
   <div class="body">
     {{ content }}
   </div>
-
-  {% if page.link %}
-    <p class="project-link"><a href="{{ page.link }}">link</a></p>
-  {% endif %}
 </article>

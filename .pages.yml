@@ -1,8 +1,10 @@
 media:
-  input: media
-  output: /media
-  rename: safe
-  categories: [image, audio, video]
+  - name: images
+    label: Images
+    input: media
+    output: /media
+    rename: safe
+    categories: [image]
 
 content:
   - name: thought
@@ -27,28 +29,14 @@ content:
         label: Date
         type: date
         required: true
-      - name: summary
-        label: Summary
-        type: text
-      - name: link
-        label: Link
-        type: string
-      - name: media
-        label: Featured media
-        type: file
-        options:
-          categories: [image, audio, video]
-      - name: media_type
-        label: Media type
-        type: select
-        options:
-          values: [image, audio, video]
-      - name: media_caption
-        label: Media caption
-        type: string
       - name: body
         label: Body
         type: rich-text
+        options:
+          format: markdown
+          media: images
+          rename: safe
+          switcher: true
   - name: life
     label: Life
     type: collection
@@ -76,4 +64,23 @@ content:
       default:
         sort: date
         order: desc
-    fields: *entry_fields
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: link
+        label: Project link
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+          rename: safe
+          switcher: true
