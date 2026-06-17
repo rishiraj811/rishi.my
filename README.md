@@ -21,6 +21,10 @@ Each thought/life entry supports `title`, `date`, and Markdown body content. Mat
 ## Local
 
 ```sh
-jekyll build
-jekyll serve
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+bundle config set path vendor/bundle
+bundle install
+bundle exec jekyll serve
 ```
+
+Then open `http://127.0.0.1:4000`.

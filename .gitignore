@@ -1,5 +1,8 @@
 .DS_Store
 .playwright-cli/
 output/
+.bundle/
+vendor/bundle/
+Gemfile.lock
 .jekyll-cache/
 _site/

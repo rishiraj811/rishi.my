@@ -5,7 +5,6 @@
   --muted: #687483;
   --line: #cbd4df;
   --accent: #005cc5;
-  --accent-soft: #e8f1ff;
   --focus: #1f5fbf;
   --rail: 128px;
   --measure: 700px;
@@ -49,7 +48,6 @@ body {
   min-height: 100vh;
   font-size: 13px;
   line-height: 1.62;
-  font-weight: 400;
 }
 
 a {
@@ -68,14 +66,9 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-img,
-video {
+img {
   display: block;
   max-width: 100%;
-}
-
-audio {
-  width: 100%;
 }
 
 .shell {
@@ -95,17 +88,7 @@ audio {
   position: sticky;
   top: 24px;
   display: grid;
-  gap: 0;
   padding-right: 18px;
-}
-
-.rail a,
-.path,
-time,
-.contact,
-.external,
-.project-link {
-  font-family: var(--mono);
 }
 
 .rail a {
@@ -157,7 +140,6 @@ h1 {
   font-size: 15px;
   font-weight: 600;
   line-height: 1.35;
-  letter-spacing: 0;
 }
 
 .page-head {
@@ -168,8 +150,6 @@ h1 {
   max-width: 54ch;
   margin-bottom: 28px;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.62;
 }
 
 .home-image {
@@ -199,10 +179,6 @@ h1 {
   padding: 0;
 }
 
-.entry-list li {
-  margin: 0;
-}
-
 .entry-list a {
   display: grid;
   grid-template-columns: 12ch minmax(0, 1fr);
@@ -212,12 +188,11 @@ h1 {
   color: var(--ink);
   text-decoration: none;
   line-height: 1.45;
+  transition: color 120ms ease;
 }
 
 time {
   color: var(--muted);
-  font-size: 13px;
-  line-height: inherit;
   white-space: nowrap;
 }
 
@@ -226,17 +201,14 @@ time {
   overflow-wrap: anywhere;
 }
 
-.entry-list a:hover {
+.entry-list a:hover,
+.entry-list a:focus-visible {
   color: var(--accent);
 }
 
-.entry-list a:hover time {
+.entry-list a:hover time,
+.entry-list a:focus-visible time {
   color: var(--accent);
-}
-
-.external,
-.project-link {
-  font-size: 12px;
 }
 
 .article header {
@@ -245,21 +217,16 @@ time {
 
 .article h1 {
   max-width: 54ch;
-  margin-bottom: 0;
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.35;
 }
 
 .project-link {
   margin: 8px 0 0;
   color: var(--muted);
+  font-size: 12px;
 }
 
 .body {
   max-width: 64ch;
-  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -276,11 +243,6 @@ time {
   margin-top: 2em;
   margin-bottom: 0.6em;
   line-height: 1.2;
-}
-
-.body code,
-.body pre {
-  font-family: var(--mono);
 }
 
 .body blockquote {
@@ -324,12 +286,5 @@ time {
 
   .content {
     padding: 34px 0 72px;
-  }
-
-  h1 {
-    font-size: 15px;
-  }
-  .body {
-    font-size: 13px;
   }
 }

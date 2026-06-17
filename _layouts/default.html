@@ -1,14 +1,11 @@
 <!doctype html>
-<!--
-  rishi.my
-  a small public directory; static, handwritten, no analytics
--->
+<!-- rishi.my: static, handwritten, no analytics -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title and page.title != site.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ page.summary | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <meta name="description" content="{{ site.description | escape }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css">
