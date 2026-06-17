@@ -1,0 +1,39 @@
+title: Rishi Singh
+description: I write, build, and collect fragments from life.
+url: "https://rishi.my"
+baseurl: ""
+timezone: America/Los_Angeles
+
+collections:
+  thought:
+    output: true
+    permalink: /thought/:name/
+  life:
+    output: true
+    permalink: /life/:name/
+  matter:
+    output: true
+    permalink: /matter/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: thought
+    values:
+      layout: entry
+      section: thought
+  - scope:
+      path: ""
+      type: life
+    values:
+      layout: entry
+      section: life
+  - scope:
+      path: ""
+      type: matter
+    values:
+      layout: entry
+      section: matter
+
+exclude:
+  - README.md

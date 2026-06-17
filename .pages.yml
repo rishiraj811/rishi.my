@@ -1,0 +1,79 @@
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image, audio, video]
+
+content:
+  - name: thought
+    label: Thought
+    type: collection
+    path: _thought
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields: &entry_fields
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: summary
+        label: Summary
+        type: text
+      - name: link
+        label: Link
+        type: string
+      - name: media
+        label: Featured media
+        type: file
+        options:
+          categories: [image, audio, video]
+      - name: media_type
+        label: Media type
+        type: select
+        options:
+          values: [image, audio, video]
+      - name: media_caption
+        label: Media caption
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+  - name: life
+    label: Life
+    type: collection
+    path: _life
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields: *entry_fields
+  - name: matter
+    label: Matter
+    type: collection
+    path: _matter
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields: *entry_fields

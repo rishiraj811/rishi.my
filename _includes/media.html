@@ -1,0 +1,16 @@
+{% assign item = include.item %}
+{% if item.media %}
+  {% assign kind = item.media_type | default: 'image' %}
+  <figure class="media-frame">
+    {% if kind == 'video' %}
+      <video controls src="{{ item.media }}"></video>
+    {% elsif kind == 'audio' %}
+      <audio controls src="{{ item.media }}"></audio>
+    {% else %}
+      <img src="{{ item.media }}" alt="{{ item.media_caption | default: item.title | escape }}">
+    {% endif %}
+    {% if item.media_caption %}
+      <figcaption>{{ item.media_caption }}</figcaption>
+    {% endif %}
+  </figure>
+{% endif %}

@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+  rishi.my
+  a small public directory; static, handwritten, no analytics
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.summary | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="rail" aria-label="Site navigation">
+        <nav>
+          <a {% if page.url == '/' %}aria-current="page"{% endif %} href="/">me</a>
+          <a {% if page.url == '/thought/' or page.collection == 'thought' %}aria-current="page"{% endif %} href="/thought/">thought</a>
+          <a {% if page.url == '/life/' or page.collection == 'life' %}aria-current="page"{% endif %} href="/life/">life</a>
+          <a {% if page.url == '/matter/' or page.collection == 'matter' %}aria-current="page"{% endif %} href="/matter/">matter</a>
+        </nav>
+      </aside>
+      <main class="content">
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>

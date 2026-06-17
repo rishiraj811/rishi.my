@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="article">
+  <header>
+    <div class="page-head">
+      <h1>{{ page.title }}</h1>
+      <p class="path"><span aria-hidden="true">&gt;</span> cat {{ page.url | remove: '.html' }}</p>
+    </div>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+  </header>
+
+  {% include media.html item=page %}
+
+  <div class="body">
+    {{ content }}
+  </div>
+
+  {% if page.link %}
+    <p class="project-link"><a href="{{ page.link }}">link</a></p>
+  {% endif %}
+</article>
