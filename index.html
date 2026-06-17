@@ -1,21 +1,23 @@
 ---
 layout: default
-title: Rishi Singh
+title: rishi.my
 ---
 
 {% assign home = site.data.home %}
-{% assign home_intro = home.intro | default: "I'm Rishi Singh. I write, build, and collect fragments from life." %}
+{% assign home_intro = home.intro | default: "I write, build, and collect fragments from life." %}
 
 <section class="home" aria-labelledby="home-title">
   <header class="page-head">
-    <h1 id="home-title">who am i?</h1>
+    <h1 id="home-title" class="identity-scramble" tabindex="0" aria-label="who am i?">
+      <span aria-hidden="true">who am i?</span>
+    </h1>
     <p class="path"><span aria-hidden="true">&gt;</span> cat /me</p>
   </header>
   <p class="intro">{{ home_intro }}</p>
 
   {% if home.image and home.image != '' %}
     <figure class="home-image">
-      <img src="{{ home.image }}" alt="{{ home.image_alt | default: 'Rishi Singh' | escape }}">
+      <img src="{{ home.image }}" alt="{{ home.image_alt | default: 'home image' | escape }}">
     </figure>
   {% endif %}
 

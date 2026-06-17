@@ -146,6 +146,40 @@ h1 {
   margin-bottom: 18px;
 }
 
+.identity-scramble {
+  position: relative;
+  width: 15ch;
+  cursor: default;
+}
+
+.identity-scramble span {
+  display: inline-block;
+}
+
+.identity-scramble::after {
+  content: "rishi raj singh";
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: var(--ink);
+  opacity: 0;
+}
+
+.identity-scramble:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.identity-scramble:hover span,
+.identity-scramble:focus-visible span {
+  opacity: 0;
+}
+
+.identity-scramble:hover::after,
+.identity-scramble:focus-visible::after {
+  opacity: 1;
+  animation: identity-resolve 520ms steps(1, end) both;
+}
+
 .intro {
   max-width: 54ch;
   margin-bottom: 28px;
@@ -286,5 +320,39 @@ time {
 
   .content {
     padding: 34px 0 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .identity-scramble:hover::after,
+  .identity-scramble:focus-visible::after {
+    animation: none;
+  }
+}
+
+@keyframes identity-resolve {
+  0% {
+    content: "w?h0 am i?";
+  }
+
+  16% {
+    content: "r!shi ?aj s";
+  }
+
+  32% {
+    content: "rishi r4j s_ng";
+  }
+
+  48% {
+    content: "rishi raj s1ng";
+  }
+
+  64% {
+    content: "rishi raj sing_";
+  }
+
+  80%,
+  100% {
+    content: "rishi raj singh";
   }
 }
