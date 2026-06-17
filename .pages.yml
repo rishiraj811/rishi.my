@@ -7,6 +7,45 @@ media:
     categories: [image]
 
 content:
+  - name: home
+    label: Home
+    type: file
+    path: _data/home.yml
+    format: yaml
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        required: true
+      - name: command
+        label: Command
+        type: string
+        required: true
+      - name: intro
+        label: Intro
+        type: text
+        required: true
+      - name: image
+        label: Image
+        type: image
+        options:
+          media: images
+          rename: safe
+      - name: image_alt
+        label: Image alt text
+        type: string
+      - name: personal_email
+        label: Personal email
+        type: string
+      - name: work_email
+        label: Work email
+        type: string
+      - name: x_url
+        label: X URL
+        type: string
+      - name: linkedin_url
+        label: LinkedIn URL
+        type: string
   - name: thought
     label: Thought
     type: collection

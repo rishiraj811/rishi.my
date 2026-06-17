@@ -172,6 +172,18 @@ h1 {
   line-height: 1.62;
 }
 
+.home-image {
+  width: min(100%, 360px);
+  margin: 0 0 26px;
+  padding: 7px;
+  border: 4px solid var(--accent);
+}
+
+.home-image img {
+  width: 100%;
+  height: auto;
+}
+
 .contact {
   display: flex;
   flex-wrap: wrap;
