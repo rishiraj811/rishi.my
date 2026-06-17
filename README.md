@@ -10,7 +10,7 @@ Small Jekyll site for `rishi.my`, edited either through Pages CMS or directly as
 - `_matter/*.md` renders at `/matter/:name/`
 - uploaded media lives in `media/`
 
-The homepage supports editable heading, command, intro, one image, and contact links.
+The homepage supports editable intro text and one image.
 Each thought/life entry supports `title`, `date`, and Markdown body content. Matter entries also support a project link.
 
 ## Editing

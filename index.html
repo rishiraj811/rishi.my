@@ -4,35 +4,25 @@ title: Rishi Singh
 ---
 
 {% assign home = site.data.home %}
-{% assign home_heading = home.heading | default: 'who am i?' %}
-{% assign home_command = home.command | default: 'cat /me' %}
 {% assign home_intro = home.intro | default: "I'm Rishi Singh. I write, build, and collect fragments from life." %}
 
 <section class="home" aria-labelledby="home-title">
   <header class="page-head">
-    <h1 id="home-title">{{ home_heading }}</h1>
-    <p class="path"><span aria-hidden="true">&gt;</span> {{ home_command }}</p>
+    <h1 id="home-title">who am i?</h1>
+    <p class="path"><span aria-hidden="true">&gt;</span> cat /me</p>
   </header>
   <p class="intro">{{ home_intro }}</p>
 
   {% if home.image and home.image != '' %}
     <figure class="home-image">
-      <img src="{{ home.image }}" alt="{{ home.image_alt | default: home_heading | escape }}">
+      <img src="{{ home.image }}" alt="{{ home.image_alt | default: 'Rishi Singh' | escape }}">
     </figure>
   {% endif %}
 
   <div class="contact" aria-label="Contact links">
-    {% if home.personal_email and home.personal_email != '' %}
-      <a href="mailto:{{ home.personal_email }}">personal email</a>
-    {% endif %}
-    {% if home.work_email and home.work_email != '' %}
-      <a href="mailto:{{ home.work_email }}">work email</a>
-    {% endif %}
-    {% if home.x_url and home.x_url != '' %}
-      <a href="{{ home.x_url }}">x</a>
-    {% endif %}
-    {% if home.linkedin_url and home.linkedin_url != '' %}
-      <a href="{{ home.linkedin_url }}">linkedin</a>
-    {% endif %}
+    <a href="mailto:rishirajsingh.iitd@gmail.com">personal email</a>
+    <a href="mailto:rsingh@accel.com">work email</a>
+    <a href="https://x.com/forwardeployed">x</a>
+    <a href="https://www.linkedin.com/in/rishiraj811/">linkedin</a>
   </div>
 </section>
