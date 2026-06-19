@@ -16,7 +16,9 @@ layout: default
     <p class="project-link"><span>link</span> <a href="{{ page.link }}">{{ project_url }}</a></p>
   {% endif %}
 
+  {% assign body_content = content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' %}
+
   <div class="body">
-    {{ content }}
+    {{ body_content }}
   </div>
 </article>

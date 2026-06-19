@@ -17,7 +17,10 @@ title: rishi.my
 
   {% if home.image and home.image != '' %}
     <figure class="home-image">
-      <img src="{{ home.image }}" alt="{{ home.image_alt | default: 'home image' | escape }}">
+      <img src="{{ home.image }}" alt="{{ home.image_alt | default: 'home image' | escape }}" loading="lazy" decoding="async">
+      {% if home.image_caption and home.image_caption != '' %}
+        <figcaption>{{ home.image_caption | escape }}</figcaption>
+      {% endif %}
     </figure>
   {% endif %}
 

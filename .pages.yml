@@ -26,6 +26,9 @@ content:
       - name: image_alt
         label: Image alt text
         type: string
+      - name: image_caption
+        label: Image caption
+        type: string
   - name: thought
     label: Thought
     type: collection

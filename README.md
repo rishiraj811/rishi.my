@@ -11,3 +11,13 @@ The site has three rooms:
 - `matter` for projects, artifacts, and things built
 
 The goal is simple: keep a small, durable record of what I am noticing, learning, making, and becoming.
+
+## Image convention
+
+Images should read like evidence attached to a memo. Use descriptive alt text, keep captions short, and add a caption by placing one italic line immediately after the image:
+
+```markdown
+![Golden Gate Bridge at sunset from the shoreline](/media/golden-gate.webp)
+
+_Golden Gate Bridge, first Bay Area work trip._
+```
