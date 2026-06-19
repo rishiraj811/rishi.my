@@ -36,6 +36,7 @@ defaults:
       section: matter
 
 exclude:
+  - AGENTS.md
   - README.md
   - Gemfile
   - Gemfile.lock
